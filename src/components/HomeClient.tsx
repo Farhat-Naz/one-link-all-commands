@@ -168,7 +168,7 @@ export default function HomeClient({
           /* Grouped by category */
           Array.from(grouped.entries()).map(([cat, catItems]) => (
             <section key={cat} className="mb-10">
-              <h2 className="text-xs font-bold tracking-widest uppercase text-[var(--dim)] mb-3 px-0.5">
+              <h2 className="text-xl font-extrabold tracking-wide uppercase text-blue-900 mb-3 px-0.5">
                 {cat}
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
