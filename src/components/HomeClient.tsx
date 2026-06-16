@@ -25,7 +25,7 @@ function Card({ item }: { item: LangItem }) {
   return (
     <Link
       href={`/${item.id}`}
-      className="group/card card-animate block rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5
+      className="group/card card-animate block h-[200px] overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5
         transition-all duration-200 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/50
         focus:outline-none focus:ring-2 focus:ring-[#58a6ff]/40"
       style={
@@ -171,7 +171,7 @@ export default function HomeClient({
               <h2 className="text-xl font-extrabold tracking-wide uppercase text-blue-900 mb-3 px-0.5">
                 {cat}
               </h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
                 {catItems.map((item, i) => (
                   <div key={item.id} className="relative" style={{ animationDelay: `${i * 30}ms` }}>
                     <Card item={item} />
@@ -182,7 +182,7 @@ export default function HomeClient({
           ))
         ) : (
           /* Flat filtered grid */
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
             {filtered.map((item, i) => (
               <div key={item.id} className="relative" style={{ animationDelay: `${i * 25}ms` }}>
                 <Card item={item} />
